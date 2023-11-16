@@ -73,7 +73,7 @@ body {
   .footerr{
     height: 125px;
     /* width: 100%; */
-    background-color: #365481;
+    background-color: red;
     color: #d9d9d9;
     display: flex;
     border-radius: 4px;
