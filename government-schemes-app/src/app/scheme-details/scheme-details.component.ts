@@ -1,30 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { SchemeService } from '../scheme.service';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-scheme-details',
   templateUrl: './scheme-details.component.html',
-  styleUrls: ['./scheme-details.component.css']
+  styleUrls: ['./scheme-details.component.css'],
 })
 export class SchemeDetailsComponent implements OnInit {
   scheme: any;
 
-  constructor(private route: ActivatedRoute, private schemeService: SchemeService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private schemeService: SchemeService
+  ) {}
 
   ngOnInit(): void {
-    const idParam = this.route.snapshot.paramMap.get('id');
-    if (idParam !== null) {
-      const id = Number(idParam); // Convert idParam to number
-      if (!isNaN(id)) {
-        this.schemeService.getSchemeById(id).subscribe(data => {
-          this.scheme = data;
-        });
-      } else {
-        console.error('Invalid ID parameter'); // Handle the error as needed
-      }
-    } else {
-      console.error('ID parameter is null'); // Handle the error as needed
-    }
+    this.route.paramMap
+      .pipe(
+        switchMap((params: ParamMap): Observable<any> => {
+          const idParam = params.get('id');
+          const id = Number(idParam);
+
+          if (!isNaN(id)) {
+            return this.schemeService.getSchemeById(id);
+          } else {
+            console.error('Invalid ID parameter'); // Handle the error as needed
+            return new Observable(); // or return an observable with an appropriate error state
+          }
+        })
+      )
+      .subscribe((data) => {
+        this.scheme = data;
+      });
   }
 }
