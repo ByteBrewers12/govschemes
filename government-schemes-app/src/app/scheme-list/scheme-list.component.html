@@ -1,11 +1,22 @@
 <!-- Navbar with Home button and manual Search dropdown -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/home']" href="https://gujaratindia.gov.in/">GujGov</a>
+    <a
+      class="navbar-brand"
+      [routerLink]="['/home']"
+      href="https://gujaratindia.gov.in/"
+      >GujGov</a
+    >
 
     <!-- Manual Search dropdown list -->
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="searchDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="searchDropdownButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
         Search Schemes
       </button>
       <ul class="dropdown-menu" aria-labelledby="searchDropdownButton">
@@ -21,7 +32,10 @@
           </div>
         </li>
         <li>
-          <div class="search-container" *ngIf="selectedSearchCriteria === 'profession'">
+          <div
+            class="search-container"
+            *ngIf="selectedSearchCriteria === 'profession'"
+          >
             <label for="profession">Select Profession:</label>
             <select id="profession" [(ngModel)]="professionSearchTerm">
               <option value="students">Students</option>
@@ -32,15 +46,23 @@
           </div>
         </li>
         <li>
-          <div class="search-container" *ngIf="selectedSearchCriteria === 'age'">
+          <div
+            class="search-container"
+            *ngIf="selectedSearchCriteria === 'age'"
+          >
             <label for="age">Select Age:</label>
             <select id="age" [(ngModel)]="ageSearchTerm">
-              <option *ngFor="let age of ageOptions" [value]="age">{{ age }}</option>
+              <option *ngFor="let age of ageOptions" [value]="age">
+                {{ age }}
+              </option>
             </select>
           </div>
         </li>
         <li>
-          <div class="search-container" *ngIf="selectedSearchCriteria === 'gender'">
+          <div
+            class="search-container"
+            *ngIf="selectedSearchCriteria === 'gender'"
+          >
             <label for="gender">Select Gender:</label>
             <select id="gender" [(ngModel)]="genderSearchTerm">
               <option value="male">Male</option>
@@ -50,7 +72,10 @@
           </div>
         </li>
         <li>
-          <div class="search-container" *ngIf="selectedSearchCriteria === 'name'">
+          <div
+            class="search-container"
+            *ngIf="selectedSearchCriteria === 'name'"
+          >
             <label for="search">Search by Name:</label>
             <input type="text" id="search" [(ngModel)]="nameSearchTerm" />
           </div>
@@ -65,19 +90,22 @@
   </div>
 </nav>
 
-
 <!-- Display filtered schemes -->
 <div *ngIf="isSearchPerformed">
   <ul *ngIf="filteredSchemes.length > 0">
     <li *ngFor="let scheme of filteredSchemes">
       <!-- Add a (mouseover) event binding to display details on hover -->
-    <a [routerLink]="['/details', scheme.id]" (mouseout)="displaySchemeDetails(scheme)" (mouseover)="displaySchemeDetails(scheme)">
-      {{ scheme.name }}
-    </a>
-    <!-- Details section that becomes visible on hover -->
-    <div class="scheme-details" *ngIf="scheme.showDetails">
-      <p><strong>Description:</strong> {{ scheme.description }}</p>
-    </div>
+      <a
+        [routerLink]="['/details', scheme.id]"
+        (mouseout)="displaySchemeDetails(scheme)"
+        (mouseover)="displaySchemeDetails(scheme)"
+      >
+        {{ scheme.name }}
+      </a>
+      <!-- Details section that becomes visible on hover -->
+      <div class="scheme-details" *ngIf="scheme.showDetails">
+        <p><strong>Description:</strong> {{ scheme.description }}</p>
+      </div>
     </li>
   </ul>
   <div *ngIf="filteredSchemes.length === 0">

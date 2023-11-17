@@ -1,7 +1,5 @@
 <!-- Popular Schemes Carousel -->
-<div
-  class="container d-flex justify-content-center align-items-center "
->
+<div class="container d-flex justify-content-center align-items-center">
   <div
     id="popularSchemesCarousel"
     class="carousel slide carousel-container"
@@ -17,7 +15,10 @@
             <h3 class="card-title">{{ scheme.name }}</h3>
             <p class="card-text">{{ scheme.description }}</p>
             <!-- Add other scheme details here -->
-            <a [routerLink]="['/details', scheme.id]" class="btn btn-primary"
+            <a
+              [routerLink]="['/details', scheme.id]"
+              class="btn btn-primary"
+              (click)="scrollToTop()"
               >Read More</a
             >
           </div>

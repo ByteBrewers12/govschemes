@@ -16,7 +16,10 @@
 
             <p class="card-text">{{ scheme.description }}</p>
             <!-- Add other scheme details here -->
-            <a [routerLink]="['/details', scheme.id]" class="btn btn-primary"
+            <a
+              [routerLink]="['/details', scheme.id]"
+              class="btn btn-primary"
+              (click)="scrollToTop()"
               >Read More</a
             >
           </div>
@@ -43,4 +46,3 @@
     </button>
   </div>
 </div>
-
