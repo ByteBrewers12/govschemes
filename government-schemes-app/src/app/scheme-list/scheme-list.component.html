@@ -1,13 +1,9 @@
 <!-- Navbar with Home button and manual Search dropdown -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a
-      class="navbar-brand"
-      [routerLink]="['/home']"
-      href="https://gujaratindia.gov.in/"
-      >GujGov</a
+    <a class="navbar-brand" href="https://www.digitalgujarat.gov.in/"
+      >Digital-Gujarat</a
     >
-
     <!-- Manual Search dropdown list -->
     <div class="dropdown">
       <button
@@ -17,17 +13,27 @@
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        Search Schemes
+        {{ "navbar.searchSchemes" | translate }}
       </button>
       <ul class="dropdown-menu" aria-labelledby="searchDropdownButton">
         <li>
           <div class="search-container">
-            <label for="searchCriteria">Select Search Criteria:</label>
+            <label for="searchCriteria">{{
+              "schemeList.searchCriteria" | translate
+            }}</label>
             <select id="searchCriteria" [(ngModel)]="selectedSearchCriteria">
-              <option value="profession">Search by Profession</option>
-              <option value="age">Search by Age</option>
-              <option value="gender">Search by Gender</option>
-              <option value="name">Search by Name</option>
+              <option value="profession">
+                {{ "schemeList.searchOptions.profession" | translate }}
+              </option>
+              <option value="age">
+                {{ "schemeList.searchOptions.age" | translate }}
+              </option>
+              <option value="gender">
+                {{ "schemeList.searchOptions.gender" | translate }}
+              </option>
+              <option value="name">
+                {{ "schemeList.searchOptions.name" | translate }}
+              </option>
             </select>
           </div>
         </li>
@@ -36,12 +42,22 @@
             class="search-container"
             *ngIf="selectedSearchCriteria === 'profession'"
           >
-            <label for="profession">Select Profession:</label>
+            <label for="profession">{{
+              "schemeList.selectProfession" | translate
+            }}</label>
             <select id="profession" [(ngModel)]="professionSearchTerm">
-              <option value="students">Students</option>
-              <option value="farmers">Farmers</option>
-              <option value="Entrepreneur">Entrepreneur</option>
-              <option value="general">General</option>
+              <option value="students">
+                {{ "schemeList.professions.students" | translate }}
+              </option>
+              <option value="farmers">
+                {{ "schemeList.professions.farmers" | translate }}
+              </option>
+              <option value="Entrepreneur">
+                {{ "schemeList.professions.entrepreneur" | translate }}
+              </option>
+              <option value="general">
+                {{ "schemeList.professions.general" | translate }}
+              </option>
             </select>
           </div>
         </li>
@@ -50,7 +66,7 @@
             class="search-container"
             *ngIf="selectedSearchCriteria === 'age'"
           >
-            <label for="age">Select Age:</label>
+            <label for="age">{{ "schemeList.selectAge" | translate }}</label>
             <select id="age" [(ngModel)]="ageSearchTerm">
               <option *ngFor="let age of ageOptions" [value]="age">
                 {{ age }}
@@ -63,11 +79,19 @@
             class="search-container"
             *ngIf="selectedSearchCriteria === 'gender'"
           >
-            <label for="gender">Select Gender:</label>
+            <label for="gender">{{
+              "schemeList.selectGender" | translate
+            }}</label>
             <select id="gender" [(ngModel)]="genderSearchTerm">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="any">Any</option>
+              <option value="male">
+                {{ "schemeList.genders.male" | translate }}
+              </option>
+              <option value="female">
+                {{ "schemeList.genders.female" | translate }}
+              </option>
+              <option value="any">
+                {{ "schemeList.genders.any" | translate }}
+              </option>
             </select>
           </div>
         </li>
@@ -76,13 +100,17 @@
             class="search-container"
             *ngIf="selectedSearchCriteria === 'name'"
           >
-            <label for="search">Search by Name:</label>
+            <label for="search">{{
+              "schemeList.searchByName" | translate
+            }}</label>
             <input type="text" id="search" [(ngModel)]="nameSearchTerm" />
           </div>
         </li>
         <li>
           <div class="search-container">
-            <button (click)="searchSchemes()">Search</button>
+            <button (click)="searchSchemes()">
+              {{ "schemeList.searchButton" | translate }}
+            </button>
           </div>
         </li>
       </ul>
@@ -94,7 +122,6 @@
 <div *ngIf="isSearchPerformed">
   <ul *ngIf="filteredSchemes.length > 0">
     <li *ngFor="let scheme of filteredSchemes">
-      <!-- Add a (mouseover) event binding to display details on hover -->
       <a
         [routerLink]="['/details', scheme.id]"
         (mouseout)="displaySchemeDetails(scheme)"
@@ -102,13 +129,15 @@
       >
         {{ scheme.name }}
       </a>
-      <!-- Details section that becomes visible on hover -->
       <div class="scheme-details" *ngIf="scheme.showDetails">
-        <p><strong>Description:</strong> {{ scheme.description }}</p>
+        <p>
+          <strong>{{ "schemeDetails.descriptionTitle" | translate }}:</strong>
+          {{ scheme.description }}
+        </p>
       </div>
     </li>
   </ul>
   <div *ngIf="filteredSchemes.length === 0">
-    No schemes found based on the provided criteria.
+    {{ "filteredSchemes.noResults" | translate }}
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SchemeService } from '../scheme.service';
 import { ViewChild, ElementRef } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-scheme-list',
@@ -19,7 +20,10 @@ export class SchemeListComponent implements OnInit {
   selectedSearchCriteria: string = 'profession'; // Default search criteria
   ageOptions: number[] = Array.from({ length: 100 }, (_, i) => i + 1);
 
-  constructor(private schemeService: SchemeService) {}
+  constructor(
+    private schemeService: SchemeService,
+    private translate: TranslateService
+  ) {}
 
   @ViewChild('searchDropdown', { static: false }) searchDropdown!: ElementRef;
 

@@ -1,4 +1,4 @@
-//data for government schemes
+//data folder -> schemes.js
 
 const schemes = [
   {

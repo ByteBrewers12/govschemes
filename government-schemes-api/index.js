@@ -5,6 +5,7 @@ const cors = require("cors");
 const { connectMongoDb } = require("./mongoConnection");
 const { logReqRes } = require("./middlewares/logger");
 const schemeRoutes = require("./routes/schemeRoutes");
+const Scheme = require("./models/scheme"); // Import the Scheme model
 
 const app = express();
 const port = 3000;
@@ -27,7 +28,12 @@ app.use(logReqRes("log.txt"));
 
 // Connect to MongoDB
 connectMongoDb("mongodb://127.0.0.1:27017/government-schemes")
-  .then(() => console.log("MongoDB Connected"))
+  .then(() => {
+    console.log("MongoDB Connected");
+    // Insert scheme data into MongoDB
+    Scheme.insertMany(require("./data/schemes"));
+    console.log("Schemes inserted into MongoDB");
+  })
   .catch((err) => console.error("MongoDB Connection Error:", err));
 
 // Use routes

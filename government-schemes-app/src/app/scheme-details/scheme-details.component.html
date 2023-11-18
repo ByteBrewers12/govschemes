@@ -1,16 +1,40 @@
 <div *ngIf="scheme">
   <h2>{{ scheme.name }}</h2>
   <p>{{ scheme.description }}</p>
-  <p><strong>Profession:</strong> {{ scheme.profession }}</p>
-  <p><strong>Minimum Age:</strong> {{ scheme.minAge }}</p>
-  <p><strong>Gender:</strong> {{ scheme.gender }}</p>
-  <p><strong>Benefits:</strong> {{ scheme.benefits }}</p>
-  <p><strong>Application Process:</strong> {{ scheme.applicationProcess }}</p>
-  <p><strong>Required Documents:</strong> {{ scheme.requiredDocuments }}</p>
-  <p><strong>Start Date:</strong> {{ scheme.startDate }}</p>
-  <p><strong>End Date:</strong> {{ scheme.endDate }}</p>
   <p>
-    <strong>Application Link:</strong>
+    <strong>{{ "schemeDetails.profession" | translate }}:</strong>
+    {{ scheme.profession }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.minAge" | translate }}:</strong>
+    {{ scheme.minAge }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.gender" | translate }}:</strong>
+    {{ scheme.gender }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.benefits" | translate }}:</strong>
+    {{ scheme.benefits }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.applicationProcess" | translate }}:</strong>
+    {{ scheme.applicationProcess }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.requiredDocuments" | translate }}:</strong>
+    {{ scheme.requiredDocuments }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.startDate" | translate }}:</strong>
+    {{ scheme.startDate }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.endDate" | translate }}:</strong>
+    {{ scheme.endDate }}
+  </p>
+  <p>
+    <strong>{{ "schemeDetails.applicationLink" | translate }}:</strong>
     <a href="{{ scheme.applicationLink }}" target="_blank">{{
       scheme.applicationLink
     }}</a>
