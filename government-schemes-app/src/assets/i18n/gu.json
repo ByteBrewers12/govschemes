@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "home": "હોમ",
+    "government": "સરકાર",
+    "language": "ભાષા",
+    "searchSchemes": "યોજનાઓ શોધો"
+  },
+  "schemeList": {
+    "searchCriteria": "શોધના માપદંડ પસંદ કરો:",
+    "searchOptions": {
+      "profession": "વૃત્તિ દ્વારા શોધો",
+      "age": "ઉંમર દ્વારા શોધો",
+      "gender": "લિંગ દ્વારા શોધો",
+      "name": "નામ દ્વારા શોધો"
+    },
+    "selectProfession": "વૃત્તિ પસંદ કરો:",
+    "selectAge": "ઉંમર પસંદ કરો:",
+    "selectGender": "લિંગ પસંદ કરો:",
+    "searchByName": "નામ દ્વારા શોધો:",
+    "searchButton": "શોધો",
+    "professions": {
+      "students": "વિદ્યાર્થિઓ",
+      "farmers": "કિસાનો",
+      "entrepreneur": "ઉદ્યમશીલ",
+      "general": "સામાન્ય"
+    },
+    "genders": {
+      "male": "પુરુષ",
+      "female": "સ્ત્રી",
+      "any": "કોઈપણ"
+    }
+  },
+  "filteredSchemes": {
+    "noResults": "પ્રદાન કરેલા માપદંડો પર આધાર રાખીને કોઈ યોજનાઓ મળી નથી."
+  },
+  "schemeDetails": {
+    "descriptionTitle": "વર્ણન",
+    "profession": "વૃત્તિ",
+    "minAge": "ન્યૂનતમ ઉંમર",
+    "gender": "લિંગ",
+    "benefits": "લાભો",
+    "applicationProcess": "અરજી પ્રક્રિયા",
+    "requiredDocuments": "આવશ્યક દસ્તાવેજો",
+    "startDate": "પ્રારંભ તારીખ",
+    "endDate": "અંતિમ તારીખ",
+    "applicationLink": "અરજી લિંક"
+  },
+  "footer": {
+    "about": "અમારા વિશે",
+    "contact": "અમારાથી સંપર્ક કરો",
+    "help": "સહાય",
+    "terms": "નિયમો અને શરતો"
+  },
+  "copyright": "&copy; 2023 સરકારી યોજના માહિતી એપ",
+  "readMore": "વધુ વાંચો",
+  "RECENT_SCHEMES": "તાજગી થઈ સરકારની યોજનાઓ",
+  "MOST_SEARCHED_SCHEMES": "સૌથી વધુ શોધાઈ ગઈ યોજનાઓ"
+}

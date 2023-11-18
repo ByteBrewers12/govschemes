@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { SchemeService } from '../scheme.service';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-scheme-details',
@@ -14,7 +15,8 @@ export class SchemeDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private schemeService: SchemeService
+    private schemeService: SchemeService,
+    private translate: TranslateService
   ) {}
 
   ngOnInit(): void {

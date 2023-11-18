@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "home": "Home",
+    "government": "Government",
+    "language": "Language",
+    "searchSchemes": "Search Schemes"
+  },
+  "schemeList": {
+    "searchCriteria": "Select Search Criteria:",
+    "searchOptions": {
+      "profession": "Search by Profession",
+      "age": "Search by Age",
+      "gender": "Search by Gender",
+      "name": "Search by Name"
+    },
+    "selectProfession": "Select Profession:",
+    "selectAge": "Select Age:",
+    "selectGender": "Select Gender:",
+    "searchByName": "Search by Name:",
+    "searchButton": "Search",
+    "professions": {
+      "students": "Students",
+      "farmers": "Farmers",
+      "entrepreneur": "Entrepreneur",
+      "general": "General"
+    },
+    "genders": {
+      "male": "Male",
+      "female": "Female",
+      "any": "Any"
+    }
+  },
+  "filteredSchemes": {
+    "noResults": "No schemes found based on the provided criteria."
+  },
+  "schemeDetails": {
+    "descriptionTitle": "Description",
+    "profession": "Profession",
+    "minAge": "Minimum Age",
+    "gender": "Gender",
+    "benefits": "Benefits",
+    "applicationProcess": "Application Process",
+    "requiredDocuments": "Required Documents",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "applicationLink": "Application Link"
+  },
+  "footer": {
+    "about": "About",
+    "contact": "Contact Us",
+    "help": "Help",
+    "terms": "Terms and Conditions"
+  },
+  "copyright": "&copy; 2023 Government Schemes Information App",
+  "readMore": "Read More",
+  "RECENT_SCHEMES": "Recently Launched Schemes",
+  "MOST_SEARCHED_SCHEMES": "Most Searched Schemes"
+}

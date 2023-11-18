@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SchemeListComponent } from './scheme-list/scheme-list.component';
@@ -10,6 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecentSchemesComponent } from './recent-schemes/recent-schemes.component';
 import { PopularSchemesComponent } from './popular-schemes/popular-schemes.component';
 import { FormsModule } from '@angular/forms';
+import { TranslationModule } from './translation/translation.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -19,7 +26,20 @@ import { FormsModule } from '@angular/forms';
     RecentSchemesComponent,
     PopularSchemesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    TranslationModule, // Include TranslationModule
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

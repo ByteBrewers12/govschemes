@@ -1,0 +1,59 @@
+{
+  "navbar": {
+    "home": "होम",
+    "government": "सरकार",
+    "language": "भाषा",
+    "searchSchemes": "स्कीम खोजें"
+  },
+  "schemeList": {
+    "searchCriteria": "खोज मापदंड चुनें:",
+    "searchOptions": {
+      "profession": "पेशेवर से खोजें",
+      "age": "आयु से खोजें",
+      "gender": "लिंग से खोजें",
+      "name": "नाम से खोजें"
+    },
+    "selectProfession": "पेशा चुनें:",
+    "selectAge": "आयु चुनें:",
+    "selectGender": "लिंग चुनें:",
+    "searchByName": "नाम से खोजें:",
+    "searchButton": "खोजें",
+    "professions": {
+      "students": "छात्र",
+      "farmers": "किसान",
+      "entrepreneur": "उद्यमिता",
+      "general": "सामान्य"
+    },
+    "genders": {
+      "male": "पुरुष",
+      "female": "महिला",
+      "any": "कोई भी"
+    }
+  },
+  "filteredSchemes": {
+    "noResults": "प्रदत्त मापदंडों पर आधारित कोई योजनाएं नहीं मिलीं।"
+  },
+  "schemeDetails": {
+    "descriptionTitle": "विवरण",
+    "profession": "पेशा",
+    "minAge": "न्यूनतम आयु",
+    "gender": "लिंग",
+    "benefits": "लाभ",
+    "applicationProcess": "आवेदन प्रक्रिया",
+    "requiredDocuments": "आवश्यक दस्तावेज़",
+    "startDate": "प्रारंभ तिथि",
+    "endDate": "समाप्ति तिथि",
+    "applicationLink": "आवेदन लिंक"
+  },
+  "footer": {
+    "about": "हमारे बारे में",
+    "contact": "संपर्क करें",
+    "help": "सहायता",
+    "terms": "नियम और शर्तें"
+  },
+  "copyright": "&copy; 2023 सरकारी योजना सूचना ऐप",
+  "readMore": "और पढ़ें",
+
+  "RECENT_SCHEMES": "हाल ही की योजनाएं",
+  "MOST_SEARCHED_SCHEMES": "सबसे अधिक खोजी गई योजनाएं"
+}
