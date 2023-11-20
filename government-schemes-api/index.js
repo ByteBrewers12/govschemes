@@ -31,7 +31,7 @@ connectMongoDb("mongodb://127.0.0.1:27017/government-schemes")
   .then(() => {
     console.log("MongoDB Connected");
     // Insert scheme data into MongoDB
-    Scheme.insertMany(require("./data/schemes"));
+    // Scheme.insertMany(require("./data/schemes"));
     console.log("Schemes inserted into MongoDB");
   })
   .catch((err) => console.error("MongoDB Connection Error:", err));

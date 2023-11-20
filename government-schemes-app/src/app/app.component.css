@@ -23,14 +23,6 @@ body {
     background-color: #1F4172;
   }
   
-  .head{
-    height: 300px;
-    /* background-color: #1F4172; */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    background-image: url(frames.jpg);
-  }
   
   nav {
     margin-top: 10px;
@@ -115,30 +107,12 @@ body {
     padding: 10px 0;
   }
 
-  .mos{
-    margin-top: -20PX;
-    height: 50px;
-    width: 100%;
-    background-color: #1F4172;
-    text-align: center;
-    color: #fbfbfbfe;
-    margin-bottom: 2%;
-    border-radius: 4px;
-    border: 4px solid #1F4172; ;
-  }
 
-  .rs{
-    margin-top: 2%;
-      height: 18%;
-      width: 100%;
-      background-color: #1F4172;
-      text-align: center;
-      color: #d9d9d9;
-    margin-bottom: 1%;
-    border : 4px solid #1F4172;
-    border-radius: 4px
-  }
-
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 
