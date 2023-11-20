@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,10 +13,18 @@ export class AppComponent {
     event.preventDefault();
     // Your custom logic here
   }
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {
     translate.setDefaultLang('en'); // Set the default language
   }
   changeLanguage(lang: string) {
     this.translate.use(lang);
+    // const id = this.route.snapshot.params['id'];
+    // this.router.navigate(['/details/id'], {
+    //   queryParamsHandling: 'preserve',
+    // });
   }
 }

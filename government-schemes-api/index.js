@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
@@ -25,13 +26,18 @@ app.use(bodyParser.json());
 app.use(express.json()); // Body -> raw -> json
 app.use(express.urlencoded({ extended: false })); // Body -> urlencoded/x-www-form-urlencoded
 app.use(logReqRes("log.txt"));
+// Serve API server files
+app.use(express.static(path.join(__dirname, "public")));
+
+// Serve images
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 // Connect to MongoDB
 connectMongoDb("mongodb://127.0.0.1:27017/government-schemes")
   .then(() => {
     console.log("MongoDB Connected");
     // Insert scheme data into MongoDB
-    Scheme.insertMany(require("./data/schemes"));
+    // Scheme.insertMany(require("./data/schemes"));
     console.log("Schemes inserted into MongoDB");
   })
   .catch((err) => console.error("MongoDB Connection Error:", err));
