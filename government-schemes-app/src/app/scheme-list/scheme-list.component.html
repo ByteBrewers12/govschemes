@@ -118,6 +118,10 @@
   </div>
 </nav>
 
+<div class="head">
+  <img [src]="displayImg" />
+</div>
+
 <!-- Display filtered schemes -->
 <div *ngIf="isSearchPerformed">
   <ul *ngIf="filteredSchemes.length > 0">
@@ -141,3 +145,20 @@
     {{ "filteredSchemes.noResults" | translate }}
   </div>
 </div>
+
+<main>
+  <!-- <router-outlet></router-outlet> -->
+  <div class="recent">
+    <div class="rs">
+      <h1>{{ "RECENT_SCHEMES" | translate }}</h1>
+    </div>
+    <div class="recentt">
+      <app-recent-schemes></app-recent-schemes>
+    </div>
+  </div>
+
+  <DIV class="mos">
+    <H1>{{ "MOST_SEARCHED_SCHEMES" | translate }}</H1>
+  </DIV>
+  <app-popular-schemes></app-popular-schemes>
+</main>
