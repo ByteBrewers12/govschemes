@@ -123,7 +123,7 @@
 </div>
 
 <!-- Display filtered schemes -->
-<div *ngIf="isSearchPerformed">
+<div *ngIf="isSearchPerformed" class="isSearchPerformed">
   <ul *ngIf="filteredSchemes.length > 0">
     <li *ngFor="let scheme of filteredSchemes">
       <a
