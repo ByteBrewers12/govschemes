@@ -46,6 +46,9 @@
     "applicationLink": "आवेदन लिंक"
   },
   "footer": {
+    "government":"सरकार",
+    "of": "",
+    "gujarat": "गुजरात",
     "about": "हमारे बारे में",
     "contact": "संपर्क करें",
     "help": "सहायता",

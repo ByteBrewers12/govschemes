@@ -46,6 +46,9 @@
     "applicationLink": "Application Link"
   },
   "footer": {
+     "government": "GOVERNMENT",
+     "of": "OF",
+     "gujarat" : "GUJARAT",
     "about": "About",
     "contact": "Contact Us",
     "help": "Help",

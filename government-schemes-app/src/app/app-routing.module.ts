@@ -9,8 +9,8 @@ import { PopularSchemesComponent } from './popular-schemes/popular-schemes.compo
 const routes: Routes = [
   { path: '', component: SchemeListComponent },
   { path: 'details/:id', component: SchemeDetailsComponent },
-  { path: 'recent-schemes', component: RecentSchemesComponent },
-  { path: 'popular-schemes', component: PopularSchemesComponent },
+  // { path: 'recent-schemes', component: RecentSchemesComponent },
+  // { path: 'popular-schemes', component: PopularSchemesComponent },
 ];
 
 @NgModule({

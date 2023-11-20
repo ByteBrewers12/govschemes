@@ -46,12 +46,15 @@
     "applicationLink": "અરજી લિંક"
   },
   "footer": {
+    "government": "સરકાર",
+    "of": "",
+    "gujarat": "ગુજરાત",
     "about": "અમારા વિશે",
     "contact": "અમારાથી સંપર્ક કરો",
     "help": "સહાય",
     "terms": "નિયમો અને શરતો"
   },
-  "copyright": "&copy; 2023 સરકારી યોજના માહિતી એપ",
+  "copyright": "&નકલ; 2023 સરકારી યોજના માહિતી એપ",
   "readMore": "વધુ વાંચો",
   "RECENT_SCHEMES": "તાજગી થઈ સરકારની યોજનાઓ",
   "MOST_SEARCHED_SCHEMES": "સૌથી વધુ શોધાઈ ગઈ યોજનાઓ"
