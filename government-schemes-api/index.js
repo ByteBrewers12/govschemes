@@ -1,10 +1,8 @@
 const express = require("express");
-const path = require("path");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const { connectMongoDb } = require("./mongoConnection");
-const { logReqRes } = require("./middlewares/logger");
 const schemeRoutes = require("./routes/schemeRoutes");
 const Scheme = require("./models/scheme"); // Import the Scheme model
 
@@ -25,12 +23,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json()); // Body -> raw -> json
 app.use(express.urlencoded({ extended: false })); // Body -> urlencoded/x-www-form-urlencoded
-app.use(logReqRes("log.txt"));
-// Serve API server files
-app.use(express.static(path.join(__dirname, "public")));
-
-// Serve images
-app.use("/images", express.static(path.join(__dirname, "images")));
 
 // Connect to MongoDB
 connectMongoDb("mongodb://127.0.0.1:27017/government-schemes")
