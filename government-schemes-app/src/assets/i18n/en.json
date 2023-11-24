@@ -57,5 +57,13 @@
   "copyright": "&copy; 2023 Government Schemes Information App",
   "readMore": "Read More",
   "RECENT_SCHEMES": "Recently Launched Schemes",
-  "MOST_SEARCHED_SCHEMES": "Most Searched Schemes"
+  "MOST_SEARCHED_SCHEMES": "Most Searched Schemes",
+
+  "students": "students",
+  "farmers": "farmers",
+  "entrepreneur": "Entrepreneurs",
+  "general": "general",
+  "male": "male",
+  "female": "female",
+  "any": "any"
 }

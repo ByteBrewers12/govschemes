@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { SchemeService } from '../scheme.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,16 +10,18 @@ import { TranslateService } from '@ngx-translate/core';
 export class RecentSchemesComponent implements OnInit {
   recentSchemes: any[] = [];
 
-  constructor(private http: HttpClient, private translate: TranslateService) {}
+  constructor(
+    private schemeService: SchemeService,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
-    // Fetch recent schemes from the API endpoint
-    this.http
-      .get('http://localhost:3000/recent-schemes')
-      .subscribe((data: any) => {
-        this.recentSchemes = data;
-      });
+    // Fetch recent schemes using the SchemeService
+    this.schemeService.getRecentSchemes().subscribe((data: any) => {
+      this.recentSchemes = data;
+    });
   }
+
   scrollToTop() {
     // Use the document object to scroll to the top of the page
     document.body.scrollTop = 0; // For Safari

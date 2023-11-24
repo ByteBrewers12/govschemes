@@ -1,0 +1,165 @@
+const schemes = [
+  {
+    id: 1,
+    name: "कुंवर बाई नु मामेरू योजना",
+    description:
+      "यह योजना आर्थिक रूप से पिछड़े हुए वर्गों की दो वयस्क बेटियों के विवाह के लिए आर्थिक सहायता प्रदान करती है।",
+    profession: "परिवार",
+    minAge: 18,
+    imageUrl:
+      "https://www.grandforksherald.com/news/local/covid-19-vaccinations-now-available-at-grand-forks-public-health",
+    gender: "महिला",
+    benefits: "विवाह व्यय के लिए आर्थिक सहायता",
+    applicationProcess: "आधिकारिक पोर्टल के माध्यम से ऑनलाइन आवेदन करें।",
+    requiredDocuments:
+      "बेटी का आधार कार्ड, दुल्हन के पिता / देखभाल करने वाले का वार्षिक आय पैटर्न, विवाह पंजीकरण प्रमाणपत्र, बैंक पासबुक / रद्द चेक (लड़की का नाम)",
+    startDate: "01-01-2024",
+    endDate: "31-12-2024",
+    applicationLink:
+      "https://esamajkalyan.gujarat.gov.in/index.aspx?ServiceID=Ey9drzWbX3d9hlLnAzNwXw==",
+  },
+  {
+    id: 2,
+    name: "SC/ST/OBC कल्याण कार्यक्रम",
+    description:
+      "एससी / एसटी / ओबीसी समुदायों के लिए सामाजिक कल्याण कार्यक्रम।",
+    profession: "सामान्य",
+    minAge: 21,
+    gender: "पुरुष",
+    benefits: "वित्तीय सहायता, कौशल विकास प्रशिक्षण",
+    applicationProcess: "पंजीकरण के लिए निकटतम सरकारी कार्यालय की यात्रा करें।",
+    requiredDocuments: "जाति प्रमाणपत्र, आय प्रमाण, निवास प्रमाण",
+    startDate: "01-04-2024",
+    endDate: "31-03-2025",
+    applicationLink: "https://www.gujarat-welfareprogram.com",
+  },
+  {
+    id: 3,
+    name: "उद्यमिता विकास योजना",
+    description: "नए व्यापार की शुरुआत के लिए समर्थन।",
+    profession: "उद्यमिता",
+    minAge: 25,
+    gender: "कोई भी",
+    benefits: "बीज पूंजी, व्यापार प्रशिक्षण, मेंटरशिप",
+    applicationProcess: "जिला कार्यालय को एक विस्तृत व्यापार योजना सबमिट करें।",
+    requiredDocuments: "व्यापार योजना, पहचान प्रमाण, पते का प्रमाण",
+    startDate: "15-02-2024",
+    endDate: "15-02-2025",
+  },
+  {
+    id: 4,
+    name: "सभी के लिए आवास",
+    description: "सभी के लिए सस्ते आवास योजना।",
+    profession: "सामान्य",
+    minAge: 18,
+    gender: "कोई भी",
+    benefits: "सब्सिडाइज़्ड आवास, कम ब्याज वाले ऋण",
+    applicationProcess: "नगर निगम के आवास विभाग के माध्यम से आवेदन करें।",
+    requiredDocuments: "आय प्रमाण, निवास प्रमाण, रोजगार विवरण",
+    startDate: "01-03-2024",
+    endDate: "31-12-2024",
+  },
+  {
+    id: 5,
+    name: "किसान समर्थन पहल",
+    description: "किसानों के लिए वित्तीय सहायता और प्रशिक्षण।",
+    profession: "किसान",
+    minAge: 18,
+    gender: "कोई भी",
+    benefits: "फसल बीमा, कृषि प्रशिक्षण, उपकरण सब्सिडी",
+    applicationProcess: "निकटतम कृषि विभाग कार्यालय का दौरा करें।",
+    requiredDocuments: "भूमि स्वामित्व दस्तावेज, आधार कार्ड, बैंक विवरण",
+    startDate: "10-05-2024",
+    endDate: "10-05-2025",
+  },
+  {
+    id: 6,
+    name: "हेल्थकेयर एक्सेस प्रोग्राम",
+    description: "सुधारित स्वास्थ्य सुविधाओं और सेवाओं।",
+    profession: "हेल्थकेयर कर्मचारी",
+    minAge: 21,
+    imageUrl:
+      "https://www.grandforksherald.com/news/local/covid-19-vaccinations-now-available-at-grand-forks-public-health",
+    gender: "कोई भी",
+    benefits: "मुफ्त चिकित्सा सेवाएं, प्रशिक्षण कार्यक्रम",
+    applicationProcess:
+      "हेल्थकेयर पेशेवर कैडर कृपया अपने संस्थान के माध्यम से आवेदन करें।",
+    requiredDocuments: "पेशेवर प्रमाणपत्र, रोजगार प्रमाणपत्र",
+    startDate: "01-06-2024",
+    endDate: "31-05-2025",
+    applicationLink: "https://www.gujarat-healthcareaccess.com",
+  },
+  {
+    id: 7,
+    name: "कला-कुशल समृद्धि पहल",
+    description: "पारंपरिक कलाकारों और शिल्पकलाओं के समर्थन के लिए।",
+    profession: "कलाकार",
+    minAge: 20,
+    gender: "कोई भी",
+    benefits: "वित्तीय सहायता, विपणी समर्थन, कौशल विकास कार्यशालाएं",
+    applicationProcess: "जिला शिल्पकला संघ कार्यालय में आवेदन करें।",
+    requiredDocuments: "कला प्रमाणपत्र, पहचान प्रमाणपत्र, नमूना काम",
+    startDate: "15-07-2024",
+    endDate: "15-07-2025",
+    applicationLink: "https://www.gujarat-artisaninitiative.com",
+  },
+  {
+    id: 8,
+    name: "छात्रवृत्ति कार्यक्रम",
+    description: "उच्च शिक्षा की पढ़ाई कर रहे छात्रों के लिए छात्रवृत्तियाँ।",
+    profession: "छात्र",
+    minAge: 18,
+    gender: "कोई भी",
+    imageUrl:
+      "https://www.grandforksherald.com/news/local/covid-19-vaccinations-now-available-at-grand-forks-public-health",
+
+    benefits: "पढ़ाई और पुस्तकों के लिए वित्तीय समर्थन",
+    applicationProcess:
+      "राज्य छात्रवृत्ति पोर्टल के माध्यम से ऑनलाइन आवेदन करें।",
+    requiredDocuments: "पिछले अकादमिक रिकॉर्ड, पहचान प्रमाणपत्र, प्रवेश पत्र",
+    startDate: "01-02-2024",
+    endDate: "31-03-2024",
+    applicationLink: "https://www.gujarat-studentscholarships.com",
+  },
+  {
+    id: 9,
+    name: "छात्र1 छात्रवृत्ति कार्यक्रम",
+    description: "उच्च शिक्षा की पढ़ाई कर रहे छात्रों के लिए छात्रवृत्तियाँ।",
+    profession: "छात्र",
+    minAge: 18,
+    gender: "कोई भी",
+    imageUrl:
+      "https://www.grandforksherald.com/news/local/covid-19-vaccinations-now-available-at-grand-forks-public-health",
+
+    benefits: "पढ़ाई और पुस्तकों के लिए वित्तीय समर्थन",
+    applicationProcess:
+      "राज्य छात्रवृत्ति पोर्टल के माध्यम से ऑनलाइन आवेदन करें।",
+    requiredDocuments: "पिछले अकादमिक रिकॉर्ड, पहचान प्रमाणपत्र, प्रवेश पत्र",
+    startDate: "06-11-2023",
+    endDate: "31-01-2024",
+    applicationLink: "https://www.gujarat-student1scholarships.com",
+  },
+  {
+    id: 10,
+    name: "छात्र-2 छात्रवृत्ति कार्यक्रम",
+    description: "उच्च शिक्षा की पढ़ाई कर रहे छात्रों के लिए छात्रवृत्तियाँ।",
+    profession: "छात्र",
+    minAge: 18,
+    gender: "कोई भी",
+    imageUrl:
+      "https://www.grandforksherald.com/news/local/covid-19-vaccinations-now-available-at-grand-forks-public-health",
+
+    benefits: "पढ़ाई और पुस्तकों के लिए वित्तीय समर्थन",
+    applicationProcess:
+      "राज्य छात्रवृत्ति पोर्टल के माध्यम से ऑनलाइन आवेदन करें।",
+    requiredDocuments: "पिछले एकेडमिक रिकॉर्ड, पहचान प्रमाणपत्र, प्रवेश पत्र",
+    startDate: "01-11-2023",
+    endDate: "31-12-2023",
+    applicationLink: "https://www.gujarat-students2cholarships.com",
+  },
+].map((scheme) => ({
+  ...scheme,
+  applications: Math.floor(Math.random() * 100), // Mock applications for sorting
+}));
+
+module.exports = schemes;

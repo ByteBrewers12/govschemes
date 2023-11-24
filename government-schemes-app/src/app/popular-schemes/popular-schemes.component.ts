@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { SchemeService } from '../scheme.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,15 +10,16 @@ import { TranslateService } from '@ngx-translate/core';
 export class PopularSchemesComponent implements OnInit {
   popularSchemes: any[] = [];
 
-  constructor(private http: HttpClient, private translate: TranslateService) {}
+  constructor(
+    private schemeService: SchemeService,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
-    // Fetch popular schemes from the API endpoint
-    this.http
-      .get('http://localhost:3000/popular-schemes')
-      .subscribe((data: any) => {
-        this.popularSchemes = data;
-      });
+    // Fetch popular schemes using the SchemeService
+    this.schemeService.getPopularSchemes().subscribe((data: any) => {
+      this.popularSchemes = data;
+    });
   }
 
   scrollToTop() {

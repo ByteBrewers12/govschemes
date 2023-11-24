@@ -20,7 +20,6 @@ app.use((_, res, next) => {
 
 // Middleware
 app.use(cors());
-app.use(bodyParser.json());
 app.use(express.json()); // Body -> raw -> json
 app.use(express.urlencoded({ extended: false })); // Body -> urlencoded/x-www-form-urlencoded
 app.use(logReqRes("log.txt"));

@@ -1,6 +1,6 @@
 // controllers/schemeHandlers.js
 
-const schemes = require("../data/schemes");
+const schemes = require("../data/schemes_en");
 
 const getSchemeById = (id) => {
   const schemeId = parseInt(id);
@@ -33,13 +33,13 @@ const getFilteredSchemes = ({ profession, age, gender, searchTerm }) => {
 const getPopularSchemes = () => {
   return [...schemes]
     .sort((a, b) => b.applications - a.applications)
-    .slice(0, 3);
+    .slice(0, 6);
 };
 
 const getRecentSchemes = () => {
   return [...schemes]
     .sort((a, b) => new Date(b.startDate) - new Date(a.startDate))
-    .slice(0, 3);
+    .slice(0, 4);
 };
 
 module.exports = {

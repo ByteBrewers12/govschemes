@@ -58,5 +58,13 @@
   "readMore": "और पढ़ें",
 
   "RECENT_SCHEMES": "हाल ही की योजनाएं",
-  "MOST_SEARCHED_SCHEMES": "सबसे अधिक खोजी गई योजनाएं"
+  "MOST_SEARCHED_SCHEMES": "सबसे अधिक खोजी गई योजनाएं",
+
+  "students": "छात्र",
+  "farmers": "किसान",
+  "entrepreneur": "उद्यमिता",
+  "general": "सामान्य",
+  "male": "पुरुष",
+  "female": "महिला",
+  "any": "कोई भी"
 }
