@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const { connectMongoDb } = require("./mongoConnection");
-const { logReqRes } = require("./middlewares/logger");
 const schemeRoutes = require("./routes/schemeRoutes");
 const Scheme = require("./models/scheme"); // Import the Scheme model
 
