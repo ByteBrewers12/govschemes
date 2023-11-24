@@ -46,16 +46,16 @@
               "schemeList.selectProfession" | translate
             }}</label>
             <select id="profession" [(ngModel)]="professionSearchTerm">
-              <option value="students">
+              <option value="{{ 'students' | translate }}">
                 {{ "schemeList.professions.students" | translate }}
               </option>
-              <option value="farmers">
+              <option value="{{ 'farmers' | translate }}">
                 {{ "schemeList.professions.farmers" | translate }}
               </option>
-              <option value="Entrepreneur">
+              <option value="{{ 'entrepreneur' | translate }}">
                 {{ "schemeList.professions.entrepreneur" | translate }}
               </option>
-              <option value="general">
+              <option value="{{ 'general' | translate }}">
                 {{ "schemeList.professions.general" | translate }}
               </option>
             </select>
@@ -83,13 +83,13 @@
               "schemeList.selectGender" | translate
             }}</label>
             <select id="gender" [(ngModel)]="genderSearchTerm">
-              <option value="male">
+              <option value="{{ 'male' | translate }}">
                 {{ "schemeList.genders.male" | translate }}
               </option>
-              <option value="female">
+              <option value="{{ 'female' | translate }}">
                 {{ "schemeList.genders.female" | translate }}
               </option>
-              <option value="any">
+              <option value="{{ 'any' | translate }}">
                 {{ "schemeList.genders.any" | translate }}
               </option>
             </select>

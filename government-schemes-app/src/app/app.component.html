@@ -80,7 +80,7 @@
     <app-popular-schemes></app-popular-schemes>
   </main> -->
 
-  <footer>
+  <footer *ngIf="showFooter">
     <div class="footerr">
       <div class="image"></div>
       <div class="text">
@@ -90,10 +90,18 @@
       </div>
       <div class="links">
         <ul>
-          <li>{{ "footer.about" | translate }}</li>
-          <li>{{ "footer.contact" | translate }}</li>
-          <li>{{ "footer.help" | translate }}</li>
-          <li>{{ "footer.terms" | translate }}</li>
+          <li>
+            <a routerLink="/about">{{ "footer.about" | translate }}</a>
+          </li>
+          <li>
+            <a routerLink="/contact">{{ "footer.contact" | translate }}</a>
+          </li>
+          <li>
+            <a routerLink="/help">{{ "footer.help" | translate }}</a>
+          </li>
+          <li>
+            <a routerLink="/terms">{{ "footer.terms" | translate }}</a>
+          </li>
         </ul>
       </div>
     </div>

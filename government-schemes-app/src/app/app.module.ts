@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
 import { TranslationModule } from './translation/translation.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { TermsComponent } from './terms/terms.component';
+import { HelpsComponent } from './helps/helps.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -25,6 +29,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     SchemeDetailsComponent,
     RecentSchemesComponent,
     PopularSchemesComponent,
+    AboutComponent,
+    ContactComponent,
+    TermsComponent,
+    HelpsComponent,
   ],
   imports: [
     BrowserModule,
