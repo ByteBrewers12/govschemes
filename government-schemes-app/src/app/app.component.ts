@@ -20,11 +20,8 @@ export class AppComponent {
   ) {
     translate.setDefaultLang('en'); // Set the default language
   }
-  changeLanguage(lang: string) {
+  changeLanguage(lang: string, event: Event) {
+    event.preventDefault();
     this.translate.use(lang);
-    // const id = this.route.snapshot.params['id'];
-    // this.router.navigate(['/details/id'], {
-    //   queryParamsHandling: 'preserve',
-    // });
   }
 }
