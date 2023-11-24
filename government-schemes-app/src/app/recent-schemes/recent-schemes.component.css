@@ -5,12 +5,13 @@
   
   /* Card Styles */
   .card {
+    background-image: url(image4.jpg);
     height: 300px;
     width: 100%;
     border: 1px solid #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.2s ease;
     background-color: rgb(255, 255, 255);
   }
   
@@ -58,7 +59,7 @@
 .card {
   width: 500px; /* Set a fixed width for the scheme card */
   height: 200px; /* Set a fixed height for the scheme card */
-  margin: 18px; /* Add margin between scheme cards */
+  margin: 3px; /* Add margin between scheme cards */
   transition: all 0.3s ease; /* Apply smooth transition for changes */
 }
 
@@ -79,7 +80,7 @@
 }
 
 .btn {
-  margin-top: 3%;
+  margin-top: 1%;
   width: 100%; /* Make the button fill the entire width of the card */
   background-color: #1f4272;
   border-color: #1f4272;

@@ -1,3 +1,4 @@
+<body class="background-image-container">
 <div class="container">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -17,6 +18,15 @@
                 translate
                 >{{ "navbar.government" }}</a
               >
+              <!-- ahiya navu nakhayu policies valu -->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  (click)="handleClick($event)"
+                  translate
+                  >{{ " navbar.policies" }}</a
+                > 
             </li>
             <li class="nav-item dropdown">
               <a
@@ -100,3 +110,4 @@
     <p class="cr">{{ "copyright" | translate }}</p>
   </footer>
 </div>
+</body>

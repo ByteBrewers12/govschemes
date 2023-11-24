@@ -2,6 +2,7 @@
   "navbar": {
     "home": "Home",
     "government": "Government",
+    "policies":"Policies",
     "language": "Language",
     "searchSchemes": "Search Schemes"
   },

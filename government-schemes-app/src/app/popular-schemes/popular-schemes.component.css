@@ -7,11 +7,13 @@
 
   /* Card Styles */
   .card {
+    background-image: url(ig4.jpg);
     width: 100%;
-    border: 1px ;
+    /* height: 300px; */
+    border: 1px solid #fff ;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0.1, 0.1);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.2s ease;
     background-color: #d0d0d0;
   }
   
@@ -60,7 +62,7 @@
 .card {
   width: 300px; /* Set a fixed width for the scheme card */
   height: 300px; /* Set a fixed height for the scheme card */
-  margin: 10px; /* Add margin between scheme cards */
+  margin: 1px; /* Add margin between scheme cards */
   transition: all 0.3s ease; /* Apply smooth transition for changes */
 }
 
@@ -81,6 +83,7 @@
 }
 
 .btn {
+  margin-top: 1%;
   width: 100%; /* Make the button fill the entire width of the card */
   background-color: #1f4272;
   border-color: #1f4272;

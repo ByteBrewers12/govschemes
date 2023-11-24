@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./scheme-list.component.css'],
 })
 export class SchemeListComponent implements OnInit {
-  displayImg = 'frames.jpg';
+  displayImg = '../../assets/frames.jpg';
   schemes: any[] = [];
   filteredSchemes: any[] = [];
   professionSearchTerm: string = '';

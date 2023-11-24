@@ -1,10 +1,11 @@
 <!-- Popular Schemes Carousel -->
-<div class="container d-flex justify-content-center align-items-center">
-  <div
+<!-- <div class="container d-flex justify-content-center align-items-center"> -->
+  <!-- <div
     id="popularSchemesCarousel"
     class="carousel slide carousel-container"
     data-bs-ride="carousel"
-  >
+  > -->
+  <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div
         *ngFor="let scheme of popularSchemes; let i = index"
@@ -14,8 +15,8 @@
           <div class="card-body">
             <h3 class="card-title">{{ scheme.name }}</h3>
             <p class="card-text">{{ scheme.description }}</p>
-            <!-- Add other scheme details here -->
-            <a
+            Add other scheme details here -->
+            <!-- <a
               [routerLink]="['/details', scheme.id]"
               class="btn btn-primary"
               (click)="scrollToTop()"
@@ -25,8 +26,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <button
+    </div> --> 
+    <!-- <button
       class="carousel-control-prev"
       type="button"
       data-bs-target="#popularSchemesCarousel"
@@ -43,6 +44,89 @@
     >
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
+    </button> -->
+  <!-- </div>
+</div> -->
+<!-- Popular Schemes Multi-card Circular Carousel -->
+<div class="container d-flex justify-content-center align-items-center">
+  <div
+    id="popularSchemesCarousel"
+    class="carousel slide carousel-container"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <ng-container *ngFor="let scheme of popularSchemes; let i = index">
+        <div
+          *ngIf="i % 3 === 0"
+          [ngClass]="{ 'carousel-item': true, active: i === 0 }"
+        >
+          <div class="d-flex">
+            <div class="card mx-2" *ngIf="i < popularSchemes.length">
+              <div class="card-body">
+                <h3 class="card-title">{{ popularSchemes[i]?.name }}</h3>
+                <p class="card-text">{{ popularSchemes[i]?.description }}</p>
+                <a
+                  [routerLink]="['/details', popularSchemes[i]?.id]"
+                  class="btn btn-primary"
+                  (click)="scrollToTop()"
+                  translate
+                  >{{ "readMore" }}</a
+                >
+              </div>
+            </div>
+            <div class="card mx-2" *ngIf="i + 1 < popularSchemes.length">
+              <div class="card-body">
+                <h3 class="card-title">{{ popularSchemes[i + 1]?.name }}</h3>
+                <p class="card-text">
+                  {{ popularSchemes[i + 1]?.description }}
+                </p>
+                <a
+                  [routerLink]="['/details', popularSchemes[i + 1]?.id]"
+                  class="btn btn-primary"
+                  (click)="scrollToTop()"
+                  translate
+                  >{{ "readMore" }}</a
+                >
+              </div>
+            </div>
+            <div class="card mx-2" *ngIf="i + 2 < popularSchemes.length">
+              <div class="card-body">
+                <h3 class="card-title">{{ popularSchemes[i + 2]?.name }}</h3>
+                <p class="card-text">
+                  {{ popularSchemes[i + 2]?.description }}
+                </p>
+                <a
+                  [routerLink]="['/details', popularSchemes[i + 2]?.id]"
+                  class="btn btn-primary"
+                  (click)="scrollToTop()"
+                  translate
+                  >{{ "readMore" }}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <!-- <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#popularSchemesCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#popularSchemesCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
   </div>
 </div>
+
+<!--() Your existing CSS styles for cards and carousel control buttons go here -->
